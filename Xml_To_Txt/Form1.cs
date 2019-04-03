@@ -107,9 +107,10 @@ namespace Xml_To_Txt
                 string xml_url = base_url + limit.ToString() + "&page=" + page.ToString();
                 lb_xml.Text = xml_url;
                 XmlReader reader = null;
-                reader = XmlReader.Create(xml_url);
+                
                 try
                 {
+                    reader = XmlReader.Create(xml_url);
                     while (reader.Read())
                     {
                         if (reader.NodeType== XmlNodeType.Element)
@@ -150,10 +151,14 @@ namespace Xml_To_Txt
                         }
                     }
                 }
-                catch
+                catch(Exception e)
                 {
-                    lb_xml.Text = "Erro in:"+xml_url;
-                    return;
+                    lb_xml.Text = "获取异常:"+xml_url;
+                    //lb_xml.Text = e.ToString();
+                    break;
+                    //sw.Close();
+                    //fs.Close();
+                    //return e.ToString();
                 }
                 page++;
             } while (num < total);

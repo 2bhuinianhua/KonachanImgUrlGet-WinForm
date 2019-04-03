@@ -261,15 +261,15 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(63, 244);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.Size = new System.Drawing.Size(71, 12);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Now Img:";
+            this.label8.Text = "Now Img ID:";
             // 
             // lb_url
             // 
             this.lb_url.AutoEllipsis = true;
             this.lb_url.AutoSize = true;
-            this.lb_url.Location = new System.Drawing.Point(119, 244);
+            this.lb_url.Location = new System.Drawing.Point(134, 244);
             this.lb_url.Name = "lb_url";
             this.lb_url.Size = new System.Drawing.Size(41, 12);
             this.lb_url.TabIndex = 13;
